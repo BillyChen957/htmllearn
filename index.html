@@ -61,39 +61,8 @@
     USA
 </address>
 <br>
-<!--带有可点击区域的图像映射-->
 
-<p>请点击图像上的星球，把它们放大。</p>
 
-<img
-        src="/img/eg_sun.gif"
-        border="0" usemap="#planetmap"
-        alt="Planets" />
-
-<map name="planetmap" id="planetmap">
-
-    <area
-            shape="circle"
-            coords="180,139,14"
-            href ="http://www.w3school.com.cn/example/html/venus.html"
-            target ="_blank"
-            alt="Venus" />
-
-    <area
-            shape="circle"
-            coords="129,161,10"
-            href ="http://www.w3school.com.cn/example/html/venus.html"
-            target ="_blank"
-            alt="Mercury" />
-
-    <area
-            shape="rect"
-            coords="0,0,110,260"
-            href ="http://www.w3school.com.cn/example/html/venus.html"
-            target ="_blank"
-            alt="Sun" />
-
-</map>
 
 <p><b>注释：</b>img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器），所以我们同时向 map 元素添加了 "id" 和 "name" 属性。</p>
 
@@ -221,7 +190,217 @@ The Epcot Center is a theme park in Disney World,Florida</aside>
     <br><br>
     <input type="submit" value="Submit">
 </form>
+<br>
+<!--hr水平线-->
+<p>hr 标签定义水平线</p>
+<hr />
+<p>段落1</p>
+<hr />
+<p>段落2</p>
+<!--i标签显示斜体文本效果。-->
+<div>
+    <i>标签显示斜体文本效果。</i>
+</div>
+<!--iframe元素会创建包含另外一个文档的内联框架（即行内框架）。-->
+<div>
+    <iframe src="img/eg_venus.gif"></iframe>
+    <p>一些老的浏览器不支持，若不支援iframe是不可见的</p>
+</div>
+<!--img-->
+<div>
+    <a href="http://www.baidu.com">
+    <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif"  />
+    </a>
+</div>
+<p>请点击图像上的星球，把它们放大</p>
+<img src="/img/eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+<map name="planetmap" id="planetmap">
+    <area shape="circle"
+    coords="180,139,14"
+    href="http://www.w3school.com.cn/example/html/venus.html"
+    target="_blank"
+    alt="Venus" />
+    <area shape="circle"
+    coords="129,161,10"
+    href="http://www.w3school.com.cn/example/html/mercur.html"
+    target="_blank"
+    alt="Mercury">
+    <area shape="rect"
+    coords="0,0,110,260"
+    href="http://www.w3school.com.cn/example/html/sun.html"
+    target="_blank"
+    alt="Sun">
 
+</map>
 
+<!--input-->
+<form>
+    name:
+    <input type="text" name="firstname">
+    <br />
+    last:
+    <input type="text" name="lastname">
+
+</form>
+<form>
+    用户：<input type="text" name="user">
+    <br />
+    密码：<input type="password" name="password">
+</form>
+<!--复选框-->
+<form>
+    我喜欢自行车：
+    <input type="checkbox" name="Bike">
+    <br />
+    我喜欢汽车：
+    <input type="checkbox" name="Car">
+</form>
+<!--单选框-->
+<form>
+    男性：<input type="radio" checked="checked" name="Sex" value="male" />
+    女生：<input type="radio" name="Sex" value="female">
+</form>
+<form>
+    <select name="cars">
+        <option value="vovlvo">Volvo</option>
+        <option value="aab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+</form>
+<form>
+    <select name="cars">
+        <option value="Volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <!--有预选值的-->
+        <option value="fiat" selected="selected">fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+</form>
+<!--文本域-->
+<textarea rows="10" cols="30">
+    The cat was playing in the garden
+</textarea>
+<!--创建按钮-->
+<form>
+    <input type="button" value="Hello world!">
+</form>
+<!--围绕数据的fieldset-->
+<form>
+    <fieldset>
+        <legend>健康信息</legend>
+        身高：<input type="text" />
+        体重：<input type="text" />
+    </fieldset>
+</form>
+<!--带有输入框和确认按钮的表单-->
+<form action="/demo/demo_form.asp">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+<p>如果您点击提交，表单数据会被发送到名为demo_form.asp的页面。</p>
+<!--带有复选框的表单-->
+<form name="input" action="/html/html_form_action.asp" method="get">
+    I have a bike:
+    <input type="checkbox" name="vehicle" value="Bike" checked="checked" />
+    <br>
+    I have a car
+    <input type="checkbox" name="vehicle" value="Car" />
+    <br>
+    I have an airplane
+    <input type="checkbox" name="vehicle" value="Airplane" />
+    <br><br>
+    <input type="submit" value="Submit" />
+</form>
+<p>如果您点击"submit"按钮，您将把输入传送到名为html_form_action.asp的新页面</p>
+<!--带有单选按钮的表单-->
+<form action="/index/index_form_action.asp" method="get">
+    <input type="radio" name="sex" value="male" checked="checked">Male
+    <br>
+    <input type="radio" name="sex" value="female">Female
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<!--从表单发送电子邮件-->
+<form action="MAILTO:someone@w3school.com.cn" method="post" enctype="text/plain">
+    <h3>这个表单会把电子邮件发送到W3School</h3>
+    姓名：<br>
+    <input type="text" name="name" value="yourname" size="50">
+    <br>
+    电邮：<br>
+    <input type="text" name="mail" value="yourmail" size="60">
+    <br>
+    内容：<br>
+    <input type="text" name="content" value="yourcontent" size="100">
+    <br><br>
+    <input type="submit" value="发送">
+    <input type="reset" value="重置">
+
+</form>
+<!--<keygen> 标签规定用于表单的密钥对生成器字段。-->
+    <!--当提交表单时，私钥存储在本地，公钥发送到服务器。-->
+<form action="/example/html5/demo_form.asp" method="get">
+    用户名：<input type="text" name="user_name" />
+    加密:<keygen name="security" />
+    <input type="submit" />
+</form>
+<!--<label> 标签为 input 元素定义标注（标记）。-->
+    <!--&lt;!&ndash;label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。&ndash;&gt;-->
+    <!--&lt;!&ndash;<label> 标签的 for 属性应当与相关元素的 id 属性相同。&ndash;&gt;-->
+    <!---->
+    <form>
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="male" />
+        <br>
+        <label for="female">Female</label>
+        <input type="radio" name="sex" id="female" />
+
+    </form>
+<!--<li> 标签定义列表项目。-->
+<!--<li> 标签可用在有序列表 (<ol>) 和无序列表 (<ul>) 中。-->
+<p>有序列表</p>
+<ol>
+    <li>打开冰箱</li>
+    <li>把大象放进去</li>
+    <li>关门</li>
+</ol>
+<p>无序列表</p>
+<ul>
+    <li>雪碧</li>
+    <li>可乐</li>
+    <li>凉茶</li>
+</ul>
+<ul type="circle">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+<ul type="square">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+<ul type="disc">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+<h4>一个嵌套列表：</h4>
+<ul>
+    <li>咖啡</li>
+    <li>茶
+        <ul>
+            <li>红茶</li>
+            <li>绿茶</li>
+        </ul>
+    </li>
+    <li>牛奶</li>
+</ul>
 </body>
 </html>
