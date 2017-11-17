@@ -1,30 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>index-css</title>
+
     <style type="text/css">
+        /*背景颜色*/
         body{
-            background-color:yellow;
+            background-color:lime;
         }
         h1{
-            background-color: lime;
+            background-color: green;
         }
         h2{
             background-color: transparent;
         }
         p{
             background-color: rgb(250,0,255);
+            color: lime;
         }
         p.no2{background-color: green;
             padding: 20px;}
+
+        /*文本背景颜色*/
+        span.highlignht{
+            background-color: yellow;
+        }
+        /*图像背景*/
+        body{
+            /*background-image: url("img/flower.png");*/
+            /*background-repeat: no-repeat;*/
+            /*!*background-position:center;*!*/
+            /*!*background-position: 50% 80%;*!*/
+            /*background-position: 50px 150px;*/
+            /*background-attachment: fixed;*/
+            /**/
+            background: url("img/flower.png") no-repeat center fixed;
+        }
+        div.flower{
+            background-image: url("img/flower.png");
+            padding: 10px;
+        }
+        a.sun{
+            background-image: url("img/eg_planets.jpg");
+            padding: 10px;
+        }
+        div.wenben{
+            color: rgb(0,0,255);
+            letter-spacing: 5px;
+            word-spacing: 10px;
+            /*行高*/
+            /*line-height:150%;*/
+            /*line-height:0.5;*/
+            line-height: 50px;
+            text-align: justify;
+        }
+        span.kback{
+            background-color: yellow;
+        }
+    /*text-decoration*/
+        div.div0{text-decoration:overline }
+        div.div1{text-decoration: line-through;}
+        div.div2{text-decoration:underline}
+        div.div3{text-decoration:blink}
+        a{text-decoration:none}
+    /*缩进文本 text-indent  */
+        div.div5{text-indent:1cm}
+        /*字母大小控制*/
+        p.uppercase{text-transform: uppercase}
+        p.lowercase{text-transform: lowercase}
+        p.captitalize{text-transform: capitalize}
+
+        /*禁止折行*/
+        p.nowrap{white-space: nowrap}
     </style>
 
 </head>
 <body>
-<h1>标题</h1>
-<h2>ssss</h2>
-<p>paaaaa</p>
-<p class="no2">mwwww</p>
+<h1>标题1</h1>
+<h2>标题2</h2>
+<p>这是段落</p>
+<p class="no2">这个段落设置了内边距</p>
+
+<p>We discovered<span class="highlignht">that your app contains hidden features</span> . Specifically, this app contains hidden functionality to load a <span class="highlignht"> webview of external content </span>within the app. It would be appropriate to ensure that all features and functions in the app are visible and fully accessible during review.
+
+    <b>The next submission of this app may require a longer review time.</b>
+
+</p>
+
+<div class="flower">flower背景<a href="#" class="sun">太阳背景有链接</a> </div>
+<br>
+<br>
+<br><br>
+<div class="wenben">接下来，<span class="kback">我们讨论 text-decoration 属性</span> ，这是一个很有意思的属性，它提供了很多非常有趣的行为。
+    text-decoration 有 5 个值：
+    none
+    underline
+    overline
+    line-through
+    blink
+    不出所料，underline 会对元素加下划线，就像 HTML 中的 U 元素一样。overline 的作用恰好相反，会在文本的顶端画一个上划线。值 line-through 则在文本中间画一个贯穿线，等价于 HTML 中的 S 和 strike 元素。blink 会让文本闪烁，类似于 Netscape 支持的颇招非议的 blink 标记。
+    none 值会关闭原本应用到一个元素上的所有装饰。通常，无装饰的文本是默认外观，但也不总是这样。例如，链接默认地会有下划线。如果您希望去掉超链接的下划线，可以使用以下 CSS 来做到这一点：</div>
+
+<div class="div0">标题1</div>
+<div class="div1">标题2</div>
+<div class="div2">标题3</div>
+<div class="div3">标题4</div>
+<div class="div4"><a href="#">这是一个链接</a> </div>
+
+<div class="div5">这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+</div>
+
+<p class="uppercase">This is some text in a paragraph</p>
+<p class="lowercase">This is some text in a paragraph</p>
+<p class="captitalize">This is some text in a paragraph</p>
+
+<p class="nowrap">这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+    这是段落中的一些文本。
+</p>
 </body>
+
 </html>
