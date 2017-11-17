@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="200" style="border: 1px solid lime;">
+    Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+    var canv=document.getElementById('myCanvas');
+    var ctx =canv.getContext("2d");
+    ctx.moveTo(10,10);
+    ctx.lineTo(150,150);
+    ctx.lineTo(10,50);
+    ctx.stroke();
+</script>
+<script type="text/javascript">
+    var canv=document.getElementById('myCanvas');
+    var ctx=canv.getContext('2d');
+    ctx.fillStyle="lime";
+    ctx.beginPath();
+    ctx.arc(70,18,15,0,Math.PI*2,true);
+    ctx.closePath();
+    ctx.fill();
+</script>
+<canvas id="myCanvas1" width="300" height="150" style="border: 1px solid lime;"></canvas>
+<script type="text/javascript">
+    var can=document.getElementById('myCanvas1');
+    var ct=can.getContext('2d');
+    var grd=ct.createLinearGradient(0,0,100,50);
+    grd.addColorStop(0,'lime');
+    grd.addColorStop(1,'green');
+    ct.fillStyle=grd;
+    ct.fillRect(0,0,100,50);
+</script>
+<script type="text/javascript">
+    var can=document.getElementById('myCanvas1');
+    var ctx=can.getContext('2d');
+    var img = new Image();
+    img.src='img/flower.png';
+    ctx.drawImage(img,0,0);
+
+</script>
+<h4>
+SVG 指可伸缩矢量图形 (Scalable Vector Graphics)<br>
+SVG 用于定义用于网络的基于矢量的图形<br>
+SVG 使用 XML 格式定义图形<br>
+SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失<br>
+SVG 是万维网联盟的标准<br>
+</h4>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180"
+             style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+<h4>地理定位</h4>
+<p id="demo">点击按钮，获取坐标</p>
+<button onclick="getLocation()">试一下</button>
+<script type="text/javascript">
+    var x = document.getElementById('demo');
+    function getLocation() {
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            x.innerHTML="Geolocation is not supported by this browser"
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = "Latitude:" + position.coords.latitude +"<br>Longitude:"+position.coords.longitude;
+    }
+</script>
+<h4>localStorage 方法存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。</h4>
+<div id="result"></div>
+<script type="text/javascript">
+    // check browser support
+    if (typeof (Storage) !== "undefined"){
+        // storage
+        localStorage.setItem("lastname","Gates");
+        localStorage.pagecount = 1;
+        localStorage.abc = 1
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname")+localStorage.abc;
+    }else{
+        document.getElementById("result").innerHTML = "抱歉！您的浏览器不支持Web Storage...";
+    }
+
+</script>
+<h4>sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。</h4>
+<script type="text/javascript">
+    if(sessionStorage.pagecount){
+        sessionStorage.pagecount = Number(sessionStorage.pagecount)+1;
+    }else{
+        sessionStorage.pagecount = 1;
+    }
+    document.write("Visits" + sessionStorage.pagecount + "time(s) this session");
+</script>
+<h4>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。<br>
+    本章全面介绍这些新的输入类型：<br>
+    email<br>
+    url<br>
+    number<br>
+    range<br>
+    Date pickers (date, month, week, time, datetime, datetime-local)<br>
+    search<br>
+    color
+</h4>
+<h4>HTML5 拥有若干涉及表单的元素和属性。
+    本章介绍以下新的表单元素：
+    datalist
+    keygen
+    output</h4>
+<h4>datalist 元素规定输入域的选项列表。
+    列表是通过 datalist 内的 option 元素创建的。
+    如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：
+</h4>
+<form action="/example/html5/demo_form.asp" method="get">
+    Webpage:<input type="url" list="url_list" name="link" />
+    <datalist id="url_list">
+        <option label="W3shool" value="http://www.w3school.com.cn" />
+        <option label="Geogle" value="http://www.google.com" />
+        <option label="Microsoft" value="http://www.microsoft.com" />
+    </datalist>
+
+    <input type="submit" />
+</form>
+<h4>keygen 元素<br>
+    keygen 元素的作用是提供一种验证用户的可靠方法。<br>
+    keygen 元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。<br>
+    私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。<br>
+    目前，浏览器对此元素的糟糕的支持度不足以使其成为一种有用的安全标准。
+</h4>
+<form action="/example/html5/demo_form.asp" method="get">
+    username:<input type="text" name="usr_name" />
+    encryption:<keygen name="security" />
+    <input type="submit" />
+</form>
+<h4>output 元素
+    output 元素用于不同类型的输出，比如计算或脚本输出：
+</h4>
+<script type="text/javascript">
+function resCalc()
+{
+numA=document.getElementById("num_a").value;
+numB=document.getElementById("num_b").value;
+document.getElementById("result1").value=Number(numA)+Number(numB);
+}
+</script>
+
+<p>使用 output 元素的简易计算器：</p>
+<form onsubmit="return false">
+    <input id="num_a" /> +
+    <input id="num_b" /> =
+<output id="result1" onforminput="resCalc()"></output>
+    </form>
+
+<h4>HTML5 的新的表单属性
+    本章讲解涉及 <form> 和 <input> 元素的新属性。<br>
+        新的 form 属性：<br>
+        autocomplete<br>
+        novalidate<br>
+        新的 input 属性：<br>
+        autocomplete<br>
+        autofocus<br>
+        form<br>
+        form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)<br>
+        height 和 width<br>
+        list<br>
+        min, max 和 step<br>
+        multiple<br>
+        pattern (regexp)<br>
+        placeholder<br>
+        required
+</h4>
+
+<h4>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。
+    注释：autocomplete 适用于 <form> 标签，以及以下类型的 <input> 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。
+        当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</h4>
+<form action="/example/html5/demo_form.asp" method="get" autocomplete="on">
+    First name:<input type="text" name="fname" /><br>
+    Last name:<input type="text" name="lname" /><br>
+    E-mail:<input type="email" name="email" autocomplete="off" /><br>
+    <input type="submit" />
+</form>
+<h4>autofocus 属性
+    autofocus 属性规定在页面加载时，域自动地获得焦点。
+    注释：autofocus 属性适用于所有 input 标签的类型。</h4>
+
+<form>
+    Name:<input type="text" autofocus="autofocus" />
+</form>
+
+
+<form action="/example/html5/demo_form.asp" method="get" id="user_form">
+    First name:<input type="text" name="fname" />
+    <input type="submit" />
+</form>
+
+<p>下面的输入域在 form 元素之外，但仍然是表单的一部分。</p>
+
+Last name: <input type="text" name="lname" form="user_form" />
+
+<h4>list 属性
+    list 属性规定输入域的 datalist。datalist 是输入域的选项列表。
+    注释：list 属性适用于以下类型的 input标签：text, search, url, telephone, email, date pickers, number, range 以及 color。</h4>
+
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Webpage: <input type="url" list="url_list11" name="link" />
+    <datalist id="url_list11">
+        <option label="W3School" value="http://www.w3school.com.cn" />
+        <option label="Google" value="http://www.google.com" />
+        <option label="Microsoft" value="http://www.microsoft.com" />
+    </datalist>
+    <input type="submit" />
+</form>
+<h4>multiple 属性
+    multiple 属性规定输入域中可选择多个值。
+    注释：multiple 属性适用于以下类型的 input>标签：email 和 file。</h4>
+</body>
+<form action="/example/html5/demo_form.asp" method="get">
+    Select images:<input type="file" name="img" multiple="multiple" />
+    <input type="submit" />
+</form>
+<h4>novalidate 属性
+    novalidate 属性规定在提交表单时不应该验证 form 或 input 域。
+    注释：novalidate 属性适用于 <form> 以及以下类型的 <input> 标签：text, search, url, telephone, email, password, date pickers, range 以及 color.
+</h4>
+
+<form action="demo_form.asp" method="get" novalidate="novalidate">
+    E-mail:<input type="email" name="user_mail" />
+    <input type="submit" />
+</form>
+
+<h4>pattern 属性
+    pattern 属性规定用于验证 input 域的模式（pattern）。
+    模式（pattern） 是正则表达式。您可以在我们的 JavaScript 教程中学习到有关正则表达式的内容。
+    注释：pattern 属性适用于以下类型的 input 标签：text, search, url, telephone, email 以及 password。
+    下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</h4>
+
+<form action="/example/html5/demo_form.asp" method="get">
+    Country code:<input type="text" name="country_code" pattern="[A-z]{3}" title="Three letter country code" />
+    <input type="submit" />
+</form>
+<h4>placeholder 属性
+    placeholder 属性提供一种提示（hint），描述输入域所期待的值。
+    注释：placeholder 属性适用于以下类型的 <input> 标签：text, search, url, telephone, email 以及 password。
+    提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失：
+</h4>
+<form action="/example/html5/demo_form.asp" method="get">
+    <input type="search" name="user_search" placeholder="Search W3School" />
+    <input type="submit" />
+</form>
+<h4>required 属性
+    required 属性规定必须在提交之前填写输入域（不能为空）。
+    注释：required 属性适用于以下类型的 input 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file。
+    实例</h4>
+<form action="/example/demo_form.asp" method="get">
+    name:<input type="text" required="required" name="user_name1" />
+    <input type="submit" />
+</form>
+
+</body>
+</html>

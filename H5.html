@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5</title>
+</head>
+<body>
+<h4>video标签</h4>
+<video src="movie.ogg" controls="controls" loop="loop">您的浏览器不支持video标签(确实不支持才会出现这话)</video>
+<h4>为视频创建简单的播放/暂停以及调整尺寸控件：</h4>
+<div style="text-align: center;">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">大</button>
+    <button onclick="makeNormal()">中</button>
+    <button onclick="makeSmall()">小</button>
+    <br>
+    <video id="video1" width="420" style="margin-top: 15px;"  >
+        <source src="/example/html5/mov_bbb.mp4" type="video/mp4" />
+        <source src="/example/html5/mov_bbb.ogg" type="video/ogg" />
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<script type="text/javascript">
+    var myVideo = document.getElementById('video1');
+    function playPause() {
+        if(myVideo.paused){
+            myVideo.play();
+        }else{
+            myVideo.pause();
+        }
+    }
+    function makeBig() {
+        myVideo.width = 560;
+    }
+    function makeSmall() {
+        myVideo.width = 320;
+    }
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+</script>
+<h4>audio 元素允许多个 source 元素。source 元素可以链接不同的音频文件。浏览器将使用第一个可识别的格式：</h4>
+<audio controls="controls">
+    <source src="song.ogg" type="audio/ogg" />
+    <source src="song.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+</audio>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index2</title>
+    <style>
+        h1{
+            color:red;
+            font-size: 16px;
+        }
+        p{
+            color:orange;
+        }
+        thead{
+            color:green;
+        }
+        tbody{
+            color: blue;
+            height: 50px;
+        }
+        tfoot{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!--<main> 标签规定文档的主要内容。-->
+    <!--<main> 元素中的内容对于文档来说应当是唯一的。它不应包含在文档中重复出现的内容，比如侧栏、导航栏、版权信息、站点标志或搜索表单。-->
+        <!--注释：在一个文档中，不能出现一个以上的 <main> 元素。<main> 元素不能是以下元素的后代：<article>、<aside>、<footer>、<header> 或 <nav>。-->
+
+<main>
+    <h1>Web Browsers</h1>
+    <p>Google Chrome,Firefox,Internet Explorer是目前最流行的浏览器</p>
+    <article>
+        <h1>Google Chrome</h1>
+        <p>Google Chrome是由Google开发的一款免费的开源web浏览器，于2008年发布</p>
+    </article>
+    <article>
+        <h1>Internet Explorer</h1>
+        <p>Internet Explorer由微软开发的一款免费的web浏览器，发布于1995年</p>
+    </article>
+    <article>
+        <h1>Mozilla Firefox</h1>
+        <p>Firefox是一款来自Mozilla的免费开源web浏览器，发布于2004年</p>
+    </article>
+</main>
+<!--<mark> 标签定义带有记号的文本。请在需要突出显示文本时使用 <m> 标签。-->
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+<p>显示度量值</p>
+<meter value="3" min="0" max="10">3/10</meter><br>
+<meter value="0.6">60%</meter>
+<!--<nav> 标签定义导航链接的部分。-->
+<nav>
+    <a href="/html/">HTML</a>|
+    <a href="/css/">CSS</a>|
+    <a href="/js/">JavaScript</a>|
+    <a href="jquery">jQuery</a>
+</nav>
+<!--<optgroup> 标签定义选项组。把相关的选项组合在一起-->
+    <!--optgroup 元素用于组合选项。当您使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。-->
+<!--option 元素定义下拉列表中的一个选项（一个条目）。-->
+<!--浏览器将 <option> 标签中的内容作为 <select> 标签的菜单或是滚动列表中的一个元素显示。-->
+    <!--option 元素位于 select 元素内部。-->
+<select>
+    <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </optgroup>
+</select>
+<!--<output> 标签定义不同类型的输出，比如脚本的输出。-->
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    0<input type="range" id="a" value="50">100+<input type="number" id="b" value="50">=
+    <output name="x" for="a b"></output>
+</form>
+<!--<progress> 标签标示任务的进度（进程）。-->
+<progress value="22" max="100"></progress>
+<!--<q> 标签定义短的引用。-->
+    <!--浏览器经常在引用的内容周围添加引号。-->
+<p>Here comes a short quotation:<q>This is a short quotation</q></p>
+<p>请注意，浏览器在引用的周围插入了引号</p>
+
+这是长的引用：
+<blockquote>
+    这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+</blockquote>
+
+这是短的引用：
+<q>
+    这是短的引用。
+</q>
+
+<p>
+    使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</p>
+<!--script-->
+<script type="text/javascript">
+    document.write("<h1>hello</h1>")
+</script>
+<noscript>Sorry,your browser does not support JavaScript!</noscript>
+<p>不支持JavaScript的浏览器将显示noscript元素中的文本</p>
+<!--<section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。-->
+<section>
+    <h1>WWF</h1>
+    <p>
+        The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation,research and restoration of the environment,formerly named the World Wildlife Fund.WWF was founded in 1961.
+    </p>
+</section>
+<section>
+    <h1>WWF's Panda symbol</h1>
+    <p>
+        The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred
+        from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.
+    </p>
+</section>
+
+<!--select-->
+<select>
+    <optgroup label="Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </optgroup>
+</select>
+<!--<link> 标签定义文档与外部资源的关系。-->
+<!--<link> 标签最常见的用途是链接样式表。-->
+
+<!--<source> 标签为媒介元素（比如 <video> 和 <audio>）定义媒介资源。-->
+    <!--<source> 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。-->
+<br>
+<audio controls>
+    <source src="img/eg_planets.jpg" type="audio/ogg">
+    <source scr="img/horse.mp3" type="audio/mpeg">
+</audio>
+<br>
+<!--<span> 标签被用来组合文档中的行内元素。-->
+<!--上下标-->
+<p>
+    This text contains <sub>subscript</sub>
+</p>
+<p>
+    This text contains <sup>superscript</sup>
+</p>
+<!--<table> 标签定义 HTML 表格。-->
+    <!--简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。-->
+    <!--tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
+    <!--更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素。-->
+<table border="1">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+<!--<tbody> 标签表格主体（正文）。该标签用于组合 HTML 表格的主体内容。-->
+<!--tbody 元素应该与 thead 和 tfoot 元素结合起来使用。-->
+<!--thead 元素用于对 HTML 表格中的表头内容进行分组，而 tfoot 元素用于对 HTML 表格中的表注（页脚）内容进行分组。-->
+<!--注释：如果您使用 thead、tfoot 以及 tbody 元素，您就必须使用全部的元素。它们的出现次序是：thead、tfoot、tbody，这样浏览器就可以在收到所有数据前呈现页脚了。您必须在 table 元素内部使用这些标签。-->
+<!--提示：在默认情况下这些元素不会影响到表格的布局。不过，您可以使用 CSS 使这些元素改变表格的外观。-->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <td>$80</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>Sum</td>
+        <td>$180</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+
+</html>

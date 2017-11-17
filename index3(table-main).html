@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index3</title>
+</head>
+<body>
+<!--table th tr td-->
+<p>每个表格由table标签开始</p>
+<p>每个表格行由tr标签开始</p>
+<p>每个表格数据由td标签开始</p>
+<h4>一列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+    </tr>
+
+</table>
+<h4>一行三列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+</table>
+<h4>两行三列：</h4>
+<table border="1">
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+</table>
+<h4>带有普通的边框：</h4>
+<table border="1">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+
+<h4>带有粗的边框：</h4>
+<table border="8">
+    <tr>
+        <td>First</td>
+        <td>Row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>Row</td>
+    </tr>
+</table>
+<h4>无边框表格</h4>
+<table>
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+</table>
+<table border="0">
+    <tr>
+        <td>100</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>400</td>
+    </tr>
+</table>
+<h4>表头</h4>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>height</th>
+    </tr>
+    <tr>
+        <td>Jack</td>
+        <td>18</td>
+        <td>179</td>
+    </tr>
+</table>
+<table border="2">
+    <tr>
+        <th>name</th>
+        <td>Jack</td>
+    </tr>
+   <tr>
+       <th>age</th>
+       <td>18</td>
+   </tr>
+</table>
+<h4>带标题表格</h4>
+<table border="5">
+    <caption>我的标题</caption>
+    <tr>
+        <td>200</td>
+        <td>500</td>
+        <td>700</td>
+    </tr>
+    <tr>
+        <td>300</td>
+    </tr>
+</table>
+<h4>跨行跨列的表格</h4>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th colspan="2">电话</th>
+    </tr>
+    <tr>
+        <td>Bill</td>
+        <td>55577854</td>
+        <td>555 77 855</td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>Bill Gates</td>
+    </tr>
+    <tr>
+        <th rowspan="2">电话</th>
+        <td>55577854</td>
+    </tr>
+    <tr>
+        <td>55577855</td>
+    </tr>
+</table>
+<h4>表格内标签</h4>
+<table border="1">
+    <tr>
+        <td>
+            <p>这是一个段落</p>
+            <p>这是另一个段落</p>
+        </td>
+        <td>
+            这个单元包含一个表格：
+            <table border="1">
+                <tr>
+                    <td>Q</td>
+                    <td>W</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>R</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            这个单元包含一个列表：
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+                <li>菠萝</li>
+            </ul>
+        </td>
+        <td>Hello</td>
+    </tr>
+</table>
+<h4>单元格间距（Cell padding spacing）</h4>
+<table border="1">
+    <tr>
+        <td>First</td>
+        <td>row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>row</td>
+    </tr>
+</table>
+<table border="1" cellpadding="20">
+    <tr>
+        <td>First</td>
+        <td>row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>row</td>
+    </tr>
+</table>
+<table border="1" cellpadding="5" cellspacing="10">
+    <tr>
+        <td>First</td>
+        <td>row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>row</td>
+    </tr>
+</table>
+<h4>背景颜色</h4>
+<table border="1" bgcolor="red">
+    <tr>
+        <td>First</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+    </tr>
+
+</table>
+<h4>表格背景图像</h4>
+<table border="1" background="img/eg_planets.jpg">
+    <tr>
+        <td>First</td>
+        <td>row</td>
+    </tr>
+    <tr>
+        <td>Second</td>
+        <td>row</td>
+    </tr>
+</table>
+<h4>单元格背景</h4>
+<table border="1">
+    <tr>
+        <td bgcolor="red">First</td>
+        <td background="img/eg_planets.jpg">Row</td>
+    </tr>
+</table>
+<table width="400" border="1">
+    <tr>
+        <th align="left">消费项目....</th>
+        <th align="right">一月</th>
+        <th align="right">二月</th>
+    </tr>
+    <tr>
+        <td align="left">衣服</td>
+        <td align="right">$241.10</td>
+        <td align="right">$50.20</td>
+    </tr>
+    <tr>
+        <td align="left">化妆品</td>
+        <td align="right">$30.00</td>
+        <td align="right">$44.45</td>
+    </tr>
+    <tr>
+        <td align="left">食物</td>
+        <td align="right">$730.40</td>
+        <td align="right">$650.00</td>
+    </tr>
+    <tr>
+        <th align="left">总计</th>
+        <th align="right">$1001.50</th>
+        <th align="right">$744.65</th>
+    </tr>
+</table>
+
+<p><b>注释：</b>frame 属性无法在 Internet Explorer 中正确地显示。</p>
+
+<p>Table with frame="box":</p>
+<table frame="box">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="above":</p>
+<table frame="above">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="below":</p>
+<table frame="below">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="hsides":</p>
+<table frame="hsides">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<p>Table with frame="vsides":</p>
+<table frame="vsides">
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+</table>
+</body>
+</html>
