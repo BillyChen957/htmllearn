@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>Index2</title>
     <style>
-        h1{
-            color:red;
+        h1 {
+            color: red;
             font-size: 16px;
         }
-        p{
-            color:orange;
+
+        p {
+            color: orange;
         }
-        thead{
-            color:green;
+
+        thead {
+            color: green;
         }
-        tbody{
+
+        tbody {
             color: blue;
             height: 50px;
         }
-        tfoot{
+
+        tfoot {
             color: red;
         }
     </style>
@@ -26,8 +30,8 @@
 <body>
 
 <!--<main> 标签规定文档的主要内容。-->
-    <!--<main> 元素中的内容对于文档来说应当是唯一的。它不应包含在文档中重复出现的内容，比如侧栏、导航栏、版权信息、站点标志或搜索表单。-->
-        <!--注释：在一个文档中，不能出现一个以上的 <main> 元素。<main> 元素不能是以下元素的后代：<article>、<aside>、<footer>、<header> 或 <nav>。-->
+<!--<main> 元素中的内容对于文档来说应当是唯一的。它不应包含在文档中重复出现的内容，比如侧栏、导航栏、版权信息、站点标志或搜索表单。-->
+<!--注释：在一个文档中，不能出现一个以上的 <main> 元素。<main> 元素不能是以下元素的后代：<article>、<aside>、<footer>、<header> 或 <nav>。-->
 
 <main>
     <h1>Web Browsers</h1>
@@ -46,9 +50,13 @@
     </article>
 </main>
 <!--<mark> 标签定义带有记号的文本。请在需要突出显示文本时使用 <m> 标签。-->
-<p>Do not forget to buy <mark>milk</mark> today.</p>
+<p>Do not forget to buy
+    <mark>milk</mark>
+    today.
+</p>
 <p>显示度量值</p>
-<meter value="3" min="0" max="10">3/10</meter><br>
+<meter value="3" min="0" max="10">3/10</meter>
+<br>
 <meter value="0.6">60%</meter>
 <!--<nav> 标签定义导航链接的部分。-->
 <nav>
@@ -58,10 +66,10 @@
     <a href="jquery">jQuery</a>
 </nav>
 <!--<optgroup> 标签定义选项组。把相关的选项组合在一起-->
-    <!--optgroup 元素用于组合选项。当您使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。-->
+<!--optgroup 元素用于组合选项。当您使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。-->
 <!--option 元素定义下拉列表中的一个选项（一个条目）。-->
 <!--浏览器将 <option> 标签中的内容作为 <select> 标签的菜单或是滚动列表中的一个元素显示。-->
-    <!--option 元素位于 select 元素内部。-->
+<!--option 元素位于 select 元素内部。-->
 <select>
     <optgroup label="Swedish Cars">
         <option value="volvo">Volvo</option>
@@ -80,7 +88,7 @@
 <!--<progress> 标签标示任务的进度（进程）。-->
 <progress value="22" max="100"></progress>
 <!--<q> 标签定义短的引用。-->
-    <!--浏览器经常在引用的内容周围添加引号。-->
+<!--浏览器经常在引用的内容周围添加引号。-->
 <p>Here comes a short quotation:<q>This is a short quotation</q></p>
 <p>请注意，浏览器在引用的周围插入了引号</p>
 
@@ -107,13 +115,16 @@
 <section>
     <h1>WWF</h1>
     <p>
-        The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation,research and restoration of the environment,formerly named the World Wildlife Fund.WWF was founded in 1961.
+        The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the
+        conservation,research and restoration of the environment,formerly named the World Wildlife Fund.WWF was founded
+        in 1961.
     </p>
 </section>
 <section>
     <h1>WWF's Panda symbol</h1>
     <p>
-        The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred
+        The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi
+        that was transferred
         from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.
     </p>
 </section>
@@ -131,7 +142,7 @@
 <!--<link> 标签最常见的用途是链接样式表。-->
 
 <!--<source> 标签为媒介元素（比如 <video> 和 <audio>）定义媒介资源。-->
-    <!--<source> 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。-->
+<!--<source> 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。-->
 <br>
 <audio controls>
     <source src="img/eg_planets.jpg" type="audio/ogg">
@@ -147,9 +158,9 @@
     This text contains <sup>superscript</sup>
 </p>
 <!--<table> 标签定义 HTML 表格。-->
-    <!--简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。-->
-    <!--tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
-    <!--更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素。-->
+<!--简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。-->
+<!--tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
+<!--更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素。-->
 <table border="1">
     <tr>
         <th>Month</th>
