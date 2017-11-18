@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index-css(透明度)</title>
+    <style type="text/css">
+        img{
+            opacity: 0.4;
+
+        }
+        img:hover{
+            opacity: 1.0;
+        }
+
+        div.background{
+            background-image: url("img/flower2.jpg");
+            width:400px;
+            height: 266px;
+            margin: 15px;
+            border: 1px solid black;
+        }
+        div.transbox{
+            width: 338px;
+            height: 204px;
+            margin: 30px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid black;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+<img src="img/flower0.jpg" alt="flower" />
+<div class="background">
+    <div class="transbox">
+        <p>
+            This is some text that is placed in the transparent box.
+            This is some text that is placed in the transparent box.
+            This is some text that is placed in the transparent box.
+            This is some text that is placed in the transparent box.
+            This is some text that is placed in the transparent box.
+        </p>
+    </div>
+</div>
+</body>
+</html>
