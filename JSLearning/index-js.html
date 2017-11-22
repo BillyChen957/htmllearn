@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script type="text/javascript">
+        document.write("<h1>Hello world!页面加载时输出</h1>")
+        function message() {
+            alert("该提示框是通过 onload 事件调用的")
+        }
+
+
+    </script>
+    <script src="jsfiles/js0.js"></script>
+    <script src="jsfiles/js1-错误处理.js"></script>
+</head>
+<body onload="message()">
+<input type="button" onclick="disp_alert()" value="显示警告框" />
+<input type="button" onclick="show_confirm()" value="展示确认框" />
+<input type="button" onclick="try_catch()" value="try_catch" />
+<input type="button" onclick="try_catch_confirm()" value="try_catch_confirm" />
+<br />
+<input type="button" onclick="throwAction()" value="trowAction" />
+<input type="button" onclick="message3()" value="message3" />
+<br>
+Password:<input type="password" id="pas" />
+<input type="button" value="显示密码" onclick="showHidePassword()" id="showhidbtn" />
+
+<script type="text/javascript">
+    var passfield = document.getElementById("pas");
+    var showhideBtn = document.getElementById("showhidbtn");
+    function showHidePassword() {
+        if (passfield.type == "password"){
+            passfield.type = "text";
+            showhideBtn.value = "隐藏密码";
+        }else{
+            passfield.type = "password";
+            showhideBtn.value = "显示密码";
+        }
+    }
+</script>
+</body>
+</html>
